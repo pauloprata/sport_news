@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsListFragment">
+
+    <fragment
+        android:id="@+id/newsListFragment"
+        android:name="com.example.sportsnews.ui.NewsListFragment"
+        tools:layout="@layout/fragment_news_list"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.sportsnews.ui.NewsDetailFragment"
+        tools:layout="@layout/fragment_news_detail"
+        android:label="Detail" >
+        <argument
+            android:name="newsDetail"
+            app:argType="com.example.sportsnews.model.SportNews" />
+    </fragment>
+    <action android:id="@+id/action_global_newsDetailFragment" app:destination="@id/newsDetailFragment" />
+</navigation>
